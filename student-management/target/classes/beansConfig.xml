@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="regularStudent" class="com.site.RegularStudent">
+        <property name="id" value="101"/>
+        <property name="name" value="Abebe"/>
+        <property name="age" value="20"/>
+
+        <property name="address">
+            <bean class="com.site.Address">
+                <property name="city" value="Addis"/>
+                <property name="country" value="Ethiopia"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="extensionStudent" class="com.site.ExtensionStudent">
+        <property name="id" value="201"/>
+        <property name="name" value="Hana"/>
+        <property name="age" value="25"/>
+
+        <property name="address">
+            <bean class="com.site.Address">
+                <property name="city" value="Addis"/>
+                <property name="country" value="Ethiopia"/>
+            </bean>
+        </property>
+    </bean>
+
+</beans>
